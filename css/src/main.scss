@@ -1,0 +1,315 @@
+
+
+// color variables
+$teal: #47A4AD;
+$red: #ff130d;
+
+$green: #006842;
+$green-light: rgba( $green, .1 );
+
+$grey: #434A54;
+$grey-light: lighten( $grey, 40% );
+
+$navy: #002856;
+
+$orange: #F0603A;
+
+$tan: #EFDAC3;
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+.bg-teal { background: $teal; }
+.bg-green { background: $green; }
+.bg-green-light { background: $green-light; }
+.bg-red { background: $red; }
+.bg-grey { background: $grey; }
+.bg-grey-light { background: $grey-light; }
+
+.text-teal { color: $teal; }
+.text-green { color: $green; }
+.text-green-light { color: $green-light; }
+.text-red { color: $red; }
+.text-grey { color: $grey; }
+.text-grey-light { color: $grey-light; }
+
+
+body {
+	@include respond-to( 1100px ) {
+		padding: 20px;
+	}
+}
+
+
+.container {
+	background-color: $navy;
+}
+
+
+.wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+header {
+	position: relative;
+	text-align: center;
+
+	img {
+		display: block;
+	}
+}
+
+
+.page {
+	padding: 20px 0;
+	color: white;
+
+	.sixty.contact {
+		padding: 10px 10px 10px 0;
+		margin-left: 0;
+
+		@include respond-to( 768px ) {
+			padding: 20px 10px 20px 0;
+		}
+
+		h1 {
+			font-size: 1.8em;
+			line-height: 1.4em;
+			background: url(../img/bg-banner.png) right center no-repeat;
+			color: $orange;
+			text-align: center;
+		}
+
+		form {
+			padding: 20px;
+
+			@include respond-to( 768px ) {
+				padding: 20px 10px 20px 30px;
+			}
+		}
+
+		.member label {
+			display: inline-block;
+			padding: 15px 30px;
+		}
+	}
+
+	.fourty {
+		@include respond-to( 768px ) {
+			padding: 20px 10px 0 0;
+		}
+
+		.results-container {
+			h2 {
+				text-transform: uppercase;
+				@include font-block;
+				font-size: 2.4em;
+				text-align: center;
+				color: $tan;
+				padding: 0 0 20px 0;
+
+				span {
+					display: block;
+				}
+			}
+
+			.box {
+				padding: 20px;
+				color: $navy;
+
+				@include respond-to( 768px ) {
+					border-radius: 20px;
+				}
+
+				@include respond-to( 860px ) {
+					padding: 25px 35px;
+				}
+
+				.group {
+					padding: 10px 0;
+				}
+
+				h3 {
+					text-transform: uppercase;
+					@include font-block;
+					font-size: 2.2em;
+					color: $tan;
+					padding: 0;
+				}
+
+				.total-savings {
+					@include font-block;
+					background: white;
+					padding: 20px;
+					margin: 5px 0;
+					color: black;
+					font-size: 2em;
+					line-height: 1.3em;
+					text-align: center;
+				}
+			}
+		}
+
+		.tool {
+			padding: 10px 0;
+
+			@include respond-to( 768px ) {
+				padding: 20px 0;
+			}
+
+			@include respond-to( 960px ) {
+				padding: 30px 0;
+			}
+
+			.calculator {
+				padding: 10px 20px;
+
+				@include respond-to( 768px ) {
+					padding: 5px 0;
+				}
+
+				.results {
+					display: none;
+				}
+			}
+		}
+
+		.half {
+			@include respond-to( 768px ) {
+				padding: 5px 10px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:nth-child( 2 ) {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	& > .half:first-child {
+		padding-left: 0;
+	}
+}
+
+
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 15px 40px;
+	background-color: $teal;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+
+	span {
+		display: block;
+	}
+	
+	&:hover {
+		opacity: .9;
+		color: white;
+	}
+}
+
+
+textarea {
+	height: 234px;
+
+	@include respond-to( 1024px ) {
+		height: 241px;
+	}
+}
+
+
+.buttons {
+	padding: 0 20px;
+}
+
+
+footer {
+	background: white;
+
+	.footer-bar {
+		padding: 20px;
+
+		@include respond-to( 768px ) {
+			padding: 30px;
+		}
+	}
+
+	.contact-bar {
+		background: $teal;
+		text-align: center;
+		padding: 10px 0;
+		font-size: .9em;
+		line-height: 1.6em;
+
+		@include respond-to( 768px ) {
+			text-align: left;
+			line-height: 50px;
+			padding: 10px 20px; 
+		}
+
+		@include respond-to( 960px ) {
+			padding: 10px 30px;
+		}
+		
+		a {
+			color: white;
+		}
+		
+		img {
+			display: none;
+			
+			@include respond-to( 768px ) {
+				display: block;
+				float: left;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.fine-print {
+		padding: 20px 20px 30px 20px;
+		font-size: .8em;
+		line-height: 1.3em;
+		text-align: left;
+		color: darken( $grey, 30% );
+		transition: 400ms all ease-in-out;
+		opacity: .5;
+
+		@include respond-to( 960px ) {
+			padding: 20px 30px 30px 30px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		img {
+			float: right;
+			margin: 0 0 15px 15px;
+		}
+	}
+}
+
