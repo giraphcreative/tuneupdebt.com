@@ -21,7 +21,7 @@ var contact_submit = function( form ) {
 			email: $( form ).find( "input[name=email]" ).val(),
 			phone: $( form ).find( "input[name=phone]" ).val(),
 			best_time: $( form ).find( "input[name=best-time]" ).val(),
-			member: $( form ).find( "input[name=member]" ).val(),
+			member: $( form ).find( "input[name=member]:checked" ).val(),
 			message: $( form ).find( "textarea" ).val(),
 		},
 		url_params = $.param( field ),
