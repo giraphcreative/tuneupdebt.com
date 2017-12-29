@@ -76,6 +76,18 @@ header {
 	padding: 20px 0;
 	color: white;
 
+	h2 {
+		text-transform: uppercase;
+		@include font-block;
+		font-size: 2.4em;
+		color: $tan;
+		padding: 0 0 20px 0;
+
+		span {
+			display: block;
+		}
+	}
+
 	.sixty.contact {
 		padding: 10px 10px 10px 0;
 		margin-left: 0;
@@ -112,17 +124,9 @@ header {
 		}
 
 		.results-container {
-			h2 {
-				text-transform: uppercase;
-				@include font-block;
-				font-size: 2.4em;
-				text-align: center;
-				color: $tan;
-				padding: 0 0 20px 0;
 
-				span {
-					display: block;
-				}
+			h2 {
+				text-align: center;
 			}
 
 			.box {
@@ -203,6 +207,14 @@ header {
 
 	& > .half:first-child {
 		padding-left: 0;
+	}
+
+	&.thanks {
+		padding: 20px;
+
+		@include respond-to( 768px ) {
+			padding: 30px 40px;
+		}
 	}
 }
 
