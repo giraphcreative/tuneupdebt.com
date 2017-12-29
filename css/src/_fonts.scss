@@ -15,6 +15,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('fonts/gotham-bold.eot');
+    src: url('fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/gotham-bold.woff2') format('woff2'),
+        url('fonts/gotham-bold.woff') format('woff'),
+        url('fonts/gotham-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 // sans-serif mixin
 @mixin font-title {
@@ -38,6 +49,7 @@
 
 // bold face
 @mixin font-bold {
+    font-family: "Gotham Bold", sans-serif;
 	font-weight: 700;
 }
 
