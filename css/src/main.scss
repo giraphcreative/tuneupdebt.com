@@ -106,7 +106,7 @@ header {
 		}
 
 		form {
-			padding: 20px;
+			padding: 20px 10px 20px 20px;
 
 			@include respond-to( 768px ) {
 				padding: 20px 10px 20px 30px;
@@ -117,6 +117,10 @@ header {
 			display: inline-block;
 			padding: 15px 30px;
 		}
+
+		.snowflake {
+			margin: 10px 0 10px 10px;
+		}
 	}
 
 	.fourty {
@@ -125,7 +129,6 @@ header {
 		}
 
 		.results-container {
-
 			h2 {
 				text-align: center;
 			}
@@ -179,7 +182,7 @@ header {
 			}
 
 			.calculator {
-				padding: 10px 20px;
+				padding: 15px 20px;
 
 				@include respond-to( 768px ) {
 					padding: 5px 0;
