@@ -1,5 +1,5 @@
 {
-    "name" : "tune-up-debt",
+    "name" : "project",
     "version" : "1.0.0",
     "devDependencies" : {
         "grunt":                        "latest",
